@@ -1,0 +1,331 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: large;
+  background: linear-gradient(135deg, #fdf2f8, #fce7f3, #fff1f2);
+  color: #831843;
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+h1 span {
+  color: #db2777;
+  position: relative;
+}
+
+h1,h2, h3, h4, h5, h6 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+/* Floating Hearts Container */
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Heart Animation */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.Hert_icon {
+  background-color: #831843;
+  color: #000;
+}
+
+
+
+/* Question Card */
+.question-card {
+  backdrop-filter: blur(10px);
+  padding: 4.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px rgba(219, 39, 119, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+ 
+  width: 400px;
+  height: 550px;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 25px -5px rgba(219, 39, 119, 0.1);
+  transform: rotate(1deg);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: rotate(0deg);
+}
+
+/* Buttons */
+.btn-yes {
+  background: linear-gradient(135deg, #db2777, #f43f5e);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(219, 39, 119, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-yes:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(219, 39, 119, 0.4);
+}
+
+.btn-no {
+  background: white;
+  color: #9d174d;
+  padding: 1rem 2.6rem;
+  border: 2px solid #fecdd3;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-no:hover {
+  background: #fff1f2;
+  border-color: #fbcfe8;
+}
+
+
+/* Heart Icons */
+.heart-icon-large {
+  width: 64px;
+  height: 64px;
+  color: #db2777;
+  fill: #db2777;
+}
+
+.heart-icon-small {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.heart-icon-medium {
+  width: 32px;
+  height: 32px;
+  color: #db2777;
+  fill: rgba(219, 39, 119, 0.3);
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(219, 39, 119, 0.3);
+  font-family: 'Dancing Script', cursive;
+  pointer-events: none;
+  font-size: xx-large;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .question-card {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .btn-yes, .btn-no {
+    padding: 0.875rem 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+.success-card {
+  backdrop-filter: blur(10px);
+  padding: 4.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px rgba(219, 39, 119, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  width: 400px;
+  height: 550px;
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding: 40px 30px;
+}
+
+/* Image Container */
+.image-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+  
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(219, 39, 119, 0.1);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(219, 39, 119, 0.15);
+}
+
+/* Z-Index */
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+
+/* Position */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+
+/* Width/Height */
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
