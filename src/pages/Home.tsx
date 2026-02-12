@@ -183,7 +183,8 @@ export default function Home() {
                             objectFit: 'cover',        
                           }}
                   >
-                    <source src="/public/video_2026-02-12_17-19-10.mp4" type="video/mp4" />
+                    <source src="/Valentinstag-App/video_2026-02-12_17-19-10.mp4" type="video/mp4" /> {/* Path for GitHub Pages */}
+                    {/*<source src="/video_2026-02-12_17-19-10.mp4" type="video/mp4" />/* Path for local development */}
                     Dein Browser unterstützt kein Video.
                   </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
